@@ -4,7 +4,7 @@ import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import images from '../Images/logo.png';
 import '../App.css';
 
-const Navbar = ({ searchvalue, setSearchValue }) => {
+const Navbar = ({ searchvalue, setSearchValue ,toggleModal}) => {
   function searching() {
     console.log(searchvalue);
     window.location.href='/Searchedthings'
@@ -36,7 +36,7 @@ const Navbar = ({ searchvalue, setSearchValue }) => {
         </li>
       </ul>
       <div className="cart-icon">
-        <a href="#">
+        <a href="#" onClick={toggleModal}>
           <FontAwesomeIcon icon={faShoppingCart} />
         </a>
       </div>

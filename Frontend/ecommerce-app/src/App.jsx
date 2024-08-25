@@ -42,7 +42,7 @@ function App() {
     console.log(test)
     if (test === false) {
       alert("you need to login first")
-      window.location.href = ('http://localhost:3000/login')
+      window.location.href = 'http://localhost:3000/login'
       setCartItems(cartItems.filter(product => product === 'abc'));
     } else {
       setCartItems(cartItems.filter(product => product ==='as' ));

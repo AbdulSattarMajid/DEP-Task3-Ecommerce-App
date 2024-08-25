@@ -10,13 +10,14 @@ function Products({ isModalOpen, toggleModal, addToCart, cartItems, removeFromCa
   useEffect(() => {
     const storedLoginStatus = localStorage.getItem('isLoggedIn') === 'true';
     setLogin(storedLoginStatus);
+    
   }, []);
 
   const logincheck = () => {
     if (!login) {
       confirmation(login);
       setLogin(true);
-      localStorage.setItem('isLoggedIn', 'false');
+      localStorage.setItem('isLoggedIn', 'true');
     } else {
       confirmation(login);
     }

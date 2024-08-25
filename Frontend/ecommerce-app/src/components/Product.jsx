@@ -20,7 +20,7 @@ function Products({ isModalOpen, toggleModal, addToCart, cartItems, removeFromCa
       localStorage.setItem('isLoggedIn', 'true');
     } else {
       confirmation(login);
-    }
+      localStorage.removeItem('isLoggedIn')    }
   };
 
   return (
